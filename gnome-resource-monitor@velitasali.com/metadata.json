@@ -4,7 +4,9 @@
   "description": "Watch the status of system resources",
   "shell-version": [
     "3.38",
-    "40.0"
+    "40",
+    "41",
+    "42"
   ],
   "url": "https://github.com/velitasali/gnome-resource-monitor-extension",
   "uuid": "gnome-resource-monitor@velitasali.com",
