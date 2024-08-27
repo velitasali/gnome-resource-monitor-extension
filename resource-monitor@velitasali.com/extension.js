@@ -1,17 +1,16 @@
-const Me = imports.misc.extensionUtils.getCurrentExtension()
-const TopBarDecoration = Me.imports.topbardecoration.TopBarDecoration
+import { Extension } from 'resource:///org/gnome/shell/extensions/extension.js'
+import TopBarDecoration from './topbardecoration.js';
 
-var decoration = null
+export default class AwesomeTilesExtension extends Extension {
+  decoration = null;
 
-function init() {
-    
+  enable() {
+    decoration = new TopBarDecoration();
+  }
+
+  disable() {
+    decoration.destroy();
+    decoration = null;
+  }
 }
 
-function enable() {
-  decoration = new TopBarDecoration()
-}
-
-function disable() {
-  decoration.destroy()
-  decoration = null
-}
